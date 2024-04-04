@@ -1,0 +1,24 @@
+<header class="flex justify-between py-6">
+<h1 class="text-white font-semibold mx-4">USER Quiz Questions</h1>
+<a class="mx-4 hover:ring ring-pink-500 ring-offset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl p-2" href="/login">Sign Out</a>
+
+</header>
+  
+<section class=" mx-24 ">
+<div class="container">
+         <div class="card flex justify-center border-4 rounded-full border-green-800 m-10">
+   <form id="quizForm" action="/user" method="post" enctype="application/x-www-form-urlencoded">
+        <p class="font-header text-xl">Q. {{questions.Question}}</p> <br>1.
+          <input type="radio" name="answer" class="answerInput" value="{{questions.Option1}}">{{questions.Option1}} <br> 2. 
+          <input type="radio" name="answer" class="answerInput" value="{{questions.Option2}}">{{questions.Option2}} <br>3.
+          <input type="radio" name="answer" class="answerInput" value="{{questions.Option3}}">{{questions.Option3}} <br>4. 
+          <input type="radio" name="answer" class="answerInput" value="{{questions.Option4}}">{{questions.Option4}}<br>
+          <input type="text" name="canswer" class="answerInput" value="{{questions.Answer}}" hidden><br> 
+          <input type="text" name="id" class="answerInput" value="{{questions._id}}" hidden><br> 
+
+
+    <button type="submit" class="bg-green-500 text-white rounded-full mx-10 my-2 px-4 py-2" >Submit</button>
+   </form>
+  </div>
+    </div>
+</section>

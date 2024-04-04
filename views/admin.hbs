@@ -1,0 +1,53 @@
+<header class="flex justify-between bg-green-500 py-6">
+<h1 class="text-white font-semibold mx-4">Admin Quiz Questions</h1>
+<a class="mx-4 bg-white border-2 rounded-xl p-2" href="/admin/login">Sign Out</a>
+</header>
+
+<section class=" mx-24 ">
+<div class="container flex justify-center border-4 border-green-800 m-10">
+  <div class="card">
+    <form action="/admin" method="post" enctype="application/x-www-form-urlencoded">
+      Enter the question<br>
+      <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="cques"> <br>
+      Answer option1<br>
+      <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option1"><br>
+      Answer option2<br>
+      <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option2"><br>
+      Answer option3<br>
+      <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option3"><br>
+      Answer option4<br>
+      <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option4"><br><br>
+
+      Answer<br>
+      <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="answer"><br>
+      <button type="submit" class="bg-green-500 text-white rounded-full mx-32 my-2 px-4 py-2 ">Create</button>
+    </form>
+  </div>
+
+</div><br><br>
+
+<div class="flex mx-10 justify-center">
+  <div class="border-2 rounded-xl border-teal-800">
+  {{#each questions}}
+  <div class="card border-4 rounded-xl border-indigo-700 m-8 p-4">
+
+    <p class="font-header text-xl">Q. {{this.Question}}</p> <br>
+    1.{{this.Option1}} <br>
+    2.{{this.Option2}} <br>
+    3.{{this.Option3}} <br>
+    4.{{this.Option4}} <br>
+    A.{{this.Answer}} <br><br>
+
+    <a class="bg-green-500 text-white rounded-full mx-10 my-2 px-4 py-2" href="/admin/update/{{this._id}}" class="text-decoration-none text-white">Click here to
+      Update</a>
+      <a class="bg-red-500 text-white rounded-full mx-10 my-2 px-4 py-2" href="/admin/delete/{{this._id}}" class="text-decoration-none text-white">Click here to
+      Delete</a>
+  </div>
+  {{/each}}
+  </div>
+</div>
+</section>
+
+<footer>
+
+</footer>

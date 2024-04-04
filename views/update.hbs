@@ -1,0 +1,29 @@
+<header class="flex justify-between bg-green-500 py-6">
+<h1 class="text-white font-semibold mx-4">Update question</h1>
+<a class="mx-4 bg-white border-2 rounded-xl p-2" href="/admin">Admin Home</a>
+</header>
+
+{{!-- Update form --}}
+<section class=" mx-24 ">
+    <div class="container flex justify-center border-4 border-green-800 m-10">
+       <div class="card my-4">
+   <form action="/admin/update/{{question._id}}" method="post" enctype="application/x-www-form-urlencoded">
+        Question <br>
+        <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="cques" value="{{question.Question}}"> <br>
+        Answer option1<br>
+        <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option1" value="{{question.Option1}}" ><br>
+        Answer option2<br>
+        <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option2" value="{{question.Option2}}" ><br>
+        Answer option3<br>
+        <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option3" value="{{question.Option3}}" ><br>
+        Answer option4<br>
+        <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="option4" value="{{question.Option4}}" ><br><br>
+
+        Answer<br>
+        <input type="text" class="border-2 border-teal-500 rounded-full py-2 px-20 mx-0 " name="answer" value="{{question.Answer}}" ><br>
+<button type="submit" class="bg-green-500 text-white rounded-full mx-28 my-4 px-8 py-2">Update</button>
+        
+   </form>
+  </div>
+   </div>
+</section>
